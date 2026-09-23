@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1080066114606846');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1080066114606846&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Histórias Divinas — Kit Completo de Atividades Bíblicas</title>
@@ -483,7 +500,7 @@
 
 <script>
   const CHECKOUT_URL = "https://pay.kiwify.com.br/lRTJ1Va";
-  document.querySelectorAll('[data-buy]').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();if(CHECKOUT_URL){window.location.href=CHECKOUT_URL;}else{document.getElementById('comprar').scrollIntoView({behavior:'smooth'});}});});
+  document.querySelectorAll('[data-buy]').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();if(window.fbq){fbq('track','InitiateCheckout');}if(CHECKOUT_URL){window.location.href=CHECKOUT_URL;}else{document.getElementById('comprar').scrollIntoView({behavior:'smooth'});}});});
   var track=document.getElementById('track');
   document.querySelectorAll('.arrow').forEach(function(a){a.addEventListener('click',function(){var c=track.querySelector('.kcard');var w=c.getBoundingClientRect().width+18;track.scrollBy({left:w*parseInt(a.dataset.dir,10),behavior:'smooth'});});});
   var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
