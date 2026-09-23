@@ -214,6 +214,17 @@
   .hero-copy{justify-content:flex-start!important;padding-top:3%!important;height:64%!important}
   @media(min-width:760px){.hero-copy{padding-top:2%!important;height:54%!important}}
   .hero-price{bottom:2%!important}
+
+  /* ===== HERO cover fix (sin franjas beige) ===== */
+  .hero{position:relative!important;width:100%;overflow:hidden;background:var(--bg)!important;aspect-ratio:1244/1660;line-height:0}
+  @media(min-width:760px){.hero{aspect-ratio:1672/941}}
+  .hero-media{position:absolute!important;inset:0;width:100%!important;height:100%!important;object-fit:cover}
+  .hero-video{display:block!important}
+  .hero-pc{display:none!important}
+  @media(min-width:760px){.hero-video{display:none!important}.hero-pc{display:block!important}}
+  .hero-copy{position:absolute!important;top:0;left:0;right:0;bottom:auto!important;height:auto!important;padding:5% 8% 0!important;justify-content:flex-start!important;z-index:4}
+  @media(min-width:760px){.hero-copy{padding:3% 9% 0!important}}
+  .hero-price{position:absolute!important;left:0;right:0;bottom:3%!important;top:auto!important;z-index:4;display:flex;justify-content:center;padding:0 6%}
 </style>
 </head>
 <body id="top">
